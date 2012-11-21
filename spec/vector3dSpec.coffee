@@ -1,4 +1,3 @@
-# vector3dSpec.coffee
 rt: exports? and exports or @rt or @rt = {}
 
 describe 'Vector3D', ->
@@ -54,8 +53,8 @@ describe 'Vector3D', ->
 		expect( vector3d.y ).toBe 1
 		expect( vector3d.z ).toBe 1
 
-	it 'can be multiplied with a scalar', ->
-		vector3d.Multiply( 3 )
+	it 'can be scaled by a scalar', ->
+		vector3d.Scale( 3 )
 
 		expect( vector3d.x ).toBe 6
 		expect( vector3d.y ).toBe 9

@@ -53,8 +53,8 @@
       expect(vector3d.y).toBe(1);
       return expect(vector3d.z).toBe(1);
     });
-    it('can be multiplied with a scalar', function() {
-      vector3d.Multiply(3);
+    it('can be scaled by a scalar', function() {
+      vector3d.Scale(3);
       expect(vector3d.x).toBe(6);
       expect(vector3d.y).toBe(9);
       return expect(vector3d.z).toBe(12);

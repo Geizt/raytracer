@@ -75,7 +75,7 @@ class rt.Vector3D
 
 		return @
 
-	Multiply: ( scalar ) ->
+	Scale: ( scalar ) ->
 		if not scalar? or not rt.MathLibrary.IsValid( scalar )
 			throw new TypeError
 		
@@ -96,7 +96,7 @@ class rt.Vector3D
 		else
 			invLength = 1.0 / magnitude
 
-		return @.Multiply( invLength )
+		return @.Scale( invLength )
 
 	Dot: ( vector ) ->
 		if not vector? or not vector.IsValid()

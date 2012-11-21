@@ -89,7 +89,7 @@
       return this;
     };
 
-    Vector3D.prototype.Multiply = function(scalar) {
+    Vector3D.prototype.Scale = function(scalar) {
       if (!(scalar != null) || !rt.MathLibrary.IsValid(scalar)) {
         throw new TypeError;
       }
@@ -111,7 +111,7 @@
       } else {
         invLength = 1.0 / magnitude;
       }
-      return this.Multiply(invLength);
+      return this.Scale(invLength);
     };
 
     Vector3D.prototype.Dot = function(vector) {
