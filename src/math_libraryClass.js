@@ -13,6 +13,10 @@
       return !isNaN(scalar);
     };
 
+    MathLibrary.ClampScalar = function(scalar, lower_limit, upper_limit) {
+      return Math.max(lower_limit, Math.min(scalar, upper_limit));
+    };
+
     return MathLibrary;
 
   })();
