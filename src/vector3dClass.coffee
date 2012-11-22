@@ -11,7 +11,7 @@ class rt.Vector3D
 			@z = z ? 0.0
 
 	IsValid: ->
-		rt.MathLibrary.IsValid( @.x ) && rt.MathLibrary.IsValid( @.y ) && rt.MathLibrary.IsValid( @.z )
+		return rt.MathLibrary.IsValid( @.x ) and rt.MathLibrary.IsValid( @.y ) and rt.MathLibrary.IsValid( @.z )
 
 	SetZero: -> 
 		@x = 0.0
@@ -44,10 +44,10 @@ class rt.Vector3D
 		return @
 
 	Negative: -> 
-		new rt.Vector3D( -@x, -@y, -@z )
+		return new rt.Vector3D( -@x, -@y, -@z )
 
 	Copy: ->
-		new rt.Vector3D( @x, @y, @z )
+		return new rt.Vector3D( @x, @y, @z )
 
 	Add: ( vector ) ->
 		if vector? 
