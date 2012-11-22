@@ -72,21 +72,21 @@
 
   })();
 
-  rt.RGBStaticColors = (function() {
+  rt.RGBColors = (function() {
 
-    function RGBStaticColors() {}
+    function RGBColors() {}
 
-    RGBStaticColors.white = new rt.RGBColor(1.0, 1.0, 1.0);
+    RGBColors.white = new rt.RGBColor(1.0, 1.0, 1.0);
 
-    RGBStaticColors.grey = new rt.RGBColor(0.5, 0.5, 0.5);
+    RGBColors.grey = new rt.RGBColor(0.5, 0.5, 0.5);
 
-    RGBStaticColors.black = new rt.RGBColor(0.0, 0.0, 0.0);
+    RGBColors.black = new rt.RGBColor(0.0, 0.0, 0.0);
 
-    RGBStaticColors.background = RGBStaticColors.black;
+    RGBColors.background = RGBColors.black;
 
-    RGBStaticColors["default"] = RGBStaticColors.black;
+    RGBColors["default"] = RGBColors.black;
 
-    return RGBStaticColors;
+    return RGBColors;
 
   })();
 

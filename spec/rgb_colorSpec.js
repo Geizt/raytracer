@@ -48,31 +48,31 @@
     });
   });
 
-  describe('RGBStaticColors', function() {
+  describe('RGBColors', function() {
     it('has the color white', function() {
-      expect(rt.RGBStaticColors.white.red).toBe(1.0);
-      expect(rt.RGBStaticColors.white.green).toBe(1.0);
-      return expect(rt.RGBStaticColors.white.blue).toBe(1.0);
+      expect(rt.RGBColors.white.red).toBe(1.0);
+      expect(rt.RGBColors.white.green).toBe(1.0);
+      return expect(rt.RGBColors.white.blue).toBe(1.0);
     });
     it('has the color grey', function() {
-      expect(rt.RGBStaticColors.grey.red).toBe(0.5);
-      expect(rt.RGBStaticColors.grey.green).toBe(0.5);
-      return expect(rt.RGBStaticColors.grey.blue).toBe(0.5);
+      expect(rt.RGBColors.grey.red).toBe(0.5);
+      expect(rt.RGBColors.grey.green).toBe(0.5);
+      return expect(rt.RGBColors.grey.blue).toBe(0.5);
     });
     it('has the color black', function() {
-      expect(rt.RGBStaticColors.black.red).toBe(0.0);
-      expect(rt.RGBStaticColors.black.green).toBe(0.0);
-      return expect(rt.RGBStaticColors.black.blue).toBe(0.0);
+      expect(rt.RGBColors.black.red).toBe(0.0);
+      expect(rt.RGBColors.black.green).toBe(0.0);
+      return expect(rt.RGBColors.black.blue).toBe(0.0);
     });
     it('has a background color', function() {
-      expect(rt.RGBStaticColors.background.red).toBe(0.0);
-      expect(rt.RGBStaticColors.background.green).toBe(0.0);
-      return expect(rt.RGBStaticColors.background.blue).toBe(0.0);
+      expect(rt.RGBColors.background.red).toBe(0.0);
+      expect(rt.RGBColors.background.green).toBe(0.0);
+      return expect(rt.RGBColors.background.blue).toBe(0.0);
     });
     return it('has a default color', function() {
-      expect(rt.RGBStaticColors["default"].red).toBe(0.0);
-      expect(rt.RGBStaticColors["default"].green).toBe(0.0);
-      return expect(rt.RGBStaticColors["default"].blue).toBe(0.0);
+      expect(rt.RGBColors["default"].red).toBe(0.0);
+      expect(rt.RGBColors["default"].green).toBe(0.0);
+      return expect(rt.RGBColors["default"].blue).toBe(0.0);
     });
   });
 

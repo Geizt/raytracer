@@ -11,7 +11,7 @@ class rt.RGBColor
 			@blue = rt.MathLibrary.ClampScalar( blue, 0.0, 1.0 ) ? 0.0
 
 	IsValid: ->
-		rt.MathLibrary.IsValid( @.red ) && rt.MathLibrary.IsValid( @.green ) && rt.MathLibrary.IsValid( @.blue )
+		return rt.MathLibrary.IsValid( @.red ) and rt.MathLibrary.IsValid( @.green ) and rt.MathLibrary.IsValid( @.blue )
 
 	Add: ( color ) ->
 		if color? 
@@ -56,7 +56,7 @@ class rt.RGBColor
 			'blue': Math.floor( rt.MathLibrary.ClampScalar( @blue, 0.0, 1.0 ) * 255 )
 		}
 
-class rt.RGBStaticColors
+class rt.RGBColors
 	@white = new rt.RGBColor( 1.0, 1.0, 1.0 )
 	@grey = new rt.RGBColor( 0.5, 0.5, 0.5 )
 	@black = new rt.RGBColor( 0.0, 0.0, 0.0 )
