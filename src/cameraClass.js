@@ -26,6 +26,10 @@
       this.up.SetV(this.direction.Cross(this.right).Normalize()).Scale(1.5);
     }
 
+    Camera.prototype.IsValid = function() {
+      return this.position.IsValid() && this.direction.IsValid();
+    };
+
     return Camera;
 
   })();

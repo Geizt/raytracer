@@ -21,3 +21,6 @@ class rt.Camera
 
 		@up = new rt.Vector3D()
 		@up.SetV( @direction.Cross( @right ).Normalize() ).Scale( 1.5 )
+
+	IsValid: ->
+		return @position.IsValid() and @direction.IsValid()

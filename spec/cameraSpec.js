@@ -14,7 +14,7 @@
       direction = new rt.Vector3D(1.0, 0.0, 0.0);
       camera = new rt.Camera(position, direction);
     });
-    return it('can be initialized', function() {
+    it('can be initialized', function() {
       expect(camera.position.x).toBe(0.0);
       expect(camera.position.y).toBe(0.0);
       expect(camera.position.z).toBe(0.0);
@@ -27,6 +27,11 @@
       expect(camera.up.x).toBe(0.0);
       expect(camera.up.y).toBe(1.5);
       return expect(camera.up.z).toBe(0.0);
+    });
+    return it('can be validated', function() {
+      var valid_camera;
+      valid_camera = camera.IsValid();
+      return expect(valid_camera).toBe(true);
     });
   });
 

@@ -26,3 +26,8 @@ describe 'Camera', ->
 		expect( camera.up.x ).toBe 0.0
 		expect( camera.up.y ).toBe 1.5
 		expect( camera.up.z ).toBe 0.0
+
+	it 'can be validated', ->
+		valid_camera = camera.IsValid()
+
+		expect( valid_camera ).toBe true
