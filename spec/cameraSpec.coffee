@@ -10,6 +10,9 @@ describe 'Camera', ->
 
 		return
 	
+	it 'is an object', ->
+		expect( camera instanceof rt.Object ).toBe true
+
 	it 'can be initialized', ->
 		expect( camera.position.x ).toBe 0.0
 		expect( camera.position.y ).toBe 0.0

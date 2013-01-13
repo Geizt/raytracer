@@ -8,6 +8,9 @@ describe 'Vector3D', ->
 
 		return
 
+	it 'is an object', ->
+		expect( vector3d instanceof rt.Object ).toBe true
+
 	it 'can be initialized', ->
 		expect( vector3d.x ).toBe 2
 		expect( vector3d.y ).toBe 3

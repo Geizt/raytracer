@@ -8,6 +8,9 @@ describe 'RGBColor', ->
 
 		return
 
+	it 'is an object', ->
+		expect( rgb_color instanceof rt.Object ).toBe true
+
 	it 'can be initialized', ->
 		expect( rgb_color.red ).toBe 0.1
 		expect( rgb_color.green ).toBe 0.3
@@ -63,11 +66,11 @@ describe 'RGBColors', ->
 		expect( rt.RGBColors.black.blue ).toBe 0.0
 
 	it 'has a background color', ->
-		expect( rt.RGBColors.background.red ).toBe 0.0
-		expect( rt.RGBColors.background.green ).toBe 0.0
-		expect( rt.RGBColors.background.blue ).toBe 0.0
+		expect( rt.RGBColors.background_color.red ).toBe 0.0
+		expect( rt.RGBColors.background_color.green ).toBe 0.0
+		expect( rt.RGBColors.background_color.blue ).toBe 0.0
 
 	it 'has a default color', ->
-		expect( rt.RGBColors.default.red ).toBe 0.0
-		expect( rt.RGBColors.default.green ).toBe 0.0
-		expect( rt.RGBColors.default.blue ).toBe 0.0
+		expect( rt.RGBColors.default_color.red ).toBe 0.0
+		expect( rt.RGBColors.default_color.green ).toBe 0.0
+		expect( rt.RGBColors.default_color.blue ).toBe 0.0

@@ -14,6 +14,9 @@
       direction = new rt.Vector3D(1.0, 0.0, 0.0);
       camera = new rt.Camera(position, direction);
     });
+    it('is an object', function() {
+      return expect(camera instanceof rt.Object).toBe(true);
+    });
     it('can be initialized', function() {
       expect(camera.position.x).toBe(0.0);
       expect(camera.position.y).toBe(0.0);

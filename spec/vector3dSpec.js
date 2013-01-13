@@ -11,6 +11,9 @@
     beforeEach(function() {
       vector3d = new rt.Vector3D(2, 3, 4);
     });
+    it('is an object', function() {
+      return expect(vector3d instanceof rt.Object).toBe(true);
+    });
     it('can be initialized', function() {
       expect(vector3d.x).toBe(2);
       expect(vector3d.y).toBe(3);

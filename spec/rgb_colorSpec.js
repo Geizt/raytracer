@@ -11,6 +11,9 @@
     beforeEach(function() {
       rgb_color = new rt.RGBColor(0.1, 0.3, 0.8);
     });
+    it('is an object', function() {
+      return expect(rgb_color instanceof rt.Object).toBe(true);
+    });
     it('can be initialized', function() {
       expect(rgb_color.red).toBe(0.1);
       expect(rgb_color.green).toBe(0.3);
@@ -65,14 +68,14 @@
       return expect(rt.RGBColors.black.blue).toBe(0.0);
     });
     it('has a background color', function() {
-      expect(rt.RGBColors.background.red).toBe(0.0);
-      expect(rt.RGBColors.background.green).toBe(0.0);
-      return expect(rt.RGBColors.background.blue).toBe(0.0);
+      expect(rt.RGBColors.background_color.red).toBe(0.0);
+      expect(rt.RGBColors.background_color.green).toBe(0.0);
+      return expect(rt.RGBColors.background_color.blue).toBe(0.0);
     });
     return it('has a default color', function() {
-      expect(rt.RGBColors["default"].red).toBe(0.0);
-      expect(rt.RGBColors["default"].green).toBe(0.0);
-      return expect(rt.RGBColors["default"].blue).toBe(0.0);
+      expect(rt.RGBColors.default_color.red).toBe(0.0);
+      expect(rt.RGBColors.default_color.green).toBe(0.0);
+      return expect(rt.RGBColors.default_color.blue).toBe(0.0);
     });
   });
 
