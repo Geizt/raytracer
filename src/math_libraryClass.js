@@ -14,7 +14,73 @@
     };
 
     MathLibrary.ClampScalar = function(scalar, lower_limit, upper_limit) {
+      if ((scalar != null) && (lower_limit != null) && (upper_limit != null)) {
+        if (!this.IsValid(scalar) || !this.IsValid(lower_limit) || !this.IsValid(upper_limit)) {
+          throw new TypeError;
+        }
+      } else {
+        throw new TypeError;
+      }
       return Math.max(lower_limit, Math.min(scalar, upper_limit));
+    };
+
+    MathLibrary.VectorAddition = function(vector_1, vector_2) {
+      var x, y, z;
+      if ((vector_1 != null) && (vector_2 != null)) {
+        if (!(typeof vector_1.IsValid === "function" ? vector_1.IsValid() : void 0) || !(typeof vector_2.IsValid === "function" ? vector_2.IsValid() : void 0)) {
+          throw new TypeError;
+        }
+      } else {
+        throw new TypeError;
+      }
+      x = vector_1.x + vector_2.x;
+      y = vector_1.y + vector_2.y;
+      z = vector_1.z + vector_2.z;
+      return new rt.Vector3D(x, y, z);
+    };
+
+    MathLibrary.VectorSubtraction = function(vector_1, vector_2) {
+      var x, y, z;
+      if ((vector_1 != null) && (vector_2 != null)) {
+        if (!(typeof vector_1.IsValid === "function" ? vector_1.IsValid() : void 0) || !(typeof vector_2.IsValid === "function" ? vector_2.IsValid() : void 0)) {
+          throw new TypeError;
+        }
+      } else {
+        throw new TypeError;
+      }
+      x = vector_1.x - vector_2.x;
+      y = vector_1.y - vector_2.y;
+      z = vector_1.z - vector_2.z;
+      return new rt.Vector3D(x, y, z);
+    };
+
+    MathLibrary.VectorScaling = function(scalar, vector) {
+      var x, y, z;
+      if ((scalar != null) && (vector != null)) {
+        if (!this.IsValid(scalar) || !(typeof vector.IsValid === "function" ? vector.IsValid() : void 0)) {
+          throw new TypeError;
+        }
+      } else {
+        throw new TypeError;
+      }
+      x = scalar * vector.x;
+      y = scalar * vector.y;
+      z = scalar * vector.z;
+      return new rt.Vector3D(x, y, z);
+    };
+
+    MathLibrary.VectorNormalization = function(vector) {
+      var invLength, magnitude, x, y, z;
+      magnitude = vector.Magnitude();
+      if (magnitude <= Number.MIN_VALUE) {
+        invLength = Infinity;
+      } else {
+        invLength = 1.0 / magnitude;
+      }
+      x = invLength * vector.x;
+      y = invLength * vector.y;
+      z = invLength * vector.z;
+      return new rt.Vector3D(x, y, z);
     };
 
     return MathLibrary;

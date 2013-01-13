@@ -1,7 +1,7 @@
 # Create a namespace to export public methods
 rt: exports? and exports or @rt or @rt = {}
 
-class rt.Vector3D
+class rt.Vector3D extends rt.Object
 	constructor: ( x, y, z ) ->
 		if x? and not rt.MathLibrary.IsValid( x ) or y? and not rt.MathLibrary.IsValid( y ) or z? and not rt.MathLibrary.IsValid( z )
 			throw new TypeError

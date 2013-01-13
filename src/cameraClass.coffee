@@ -1,10 +1,10 @@
 # Create a namespace to export public methods
 rt: exports? and exports or @rt or @rt = {}
 
-class rt.Camera
+class rt.Camera extends rt.Object
 	constructor: ( position, direction ) ->
 		if position? and direction? 
-			if not position.IsValid?() or not direction.IsValid?()
+			if not position instanceof rt.Vector3D or not position.IsValid?() or not direction instanceof rt.Vector3D or not direction.IsValid?()
 				throw new TypeError
 		else
 			throw new TypeError

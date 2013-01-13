@@ -1,7 +1,7 @@
 # Create a namespace to export public methods
 rt: exports? and exports or @rt or @rt = {}
 
-class rt.RGBColor
+class rt.RGBColor extends rt.Object
 	constructor: ( red, green, blue ) ->
 		if red? and not rt.MathLibrary.IsValid( red ) or green? and not rt.MathLibrary.IsValid( green ) or blue? and not rt.MathLibrary.IsValid( blue )
 			throw new TypeError
@@ -60,5 +60,5 @@ class rt.RGBColors
 	@white = new rt.RGBColor( 1.0, 1.0, 1.0 )
 	@grey = new rt.RGBColor( 0.5, 0.5, 0.5 )
 	@black = new rt.RGBColor( 0.0, 0.0, 0.0 )
-	@background = @black
-	@default = @black
+	@background_color = @black
+	@default_color = @black
