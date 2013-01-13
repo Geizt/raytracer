@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Coffee Tracer - A Ray Tracer in CoffeeScript</title>
+		
+		<script src='src/objectClass.js'></script>
+		<script src='src/geometric_objectClass.js'></script>
+		<script src='src/math_libraryClass.js'></script>
+		<script src='src/vector3dClass.js'></script>
+		<script src='src/rgb_colorClass.js'></script>
+		<script src='src/cameraClass.js'></script>
+		<script src='src/rayClass.js'></script>
+		<script src='src/lightClass.js'></script>
+		<script src='src/surfaceClass.js'></script>
+		<script src='src/reflective_surfaceClass.js'></script>
+		<script src='src/checkerboard_surfaceClass.js'></script>
+		<script src='src/sphereClass.js'></script>
+		<script src='src/planeClass.js'></script>
+		<script src='src/intersectionClass.js'></script>
+		<script src='src/ray_tracerClass.js'></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var width = 256;
+			var height = 256;
+
+			var element = document.createElement( 'canvas' );
+
+			element.width = width;
+			element.height = height;
+
+			document.body.appendChild( element );
+
+			var context = element.getContext( '2d' );
+		</script>
+	</body>
+</html>
